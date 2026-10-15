@@ -1,4 +1,5 @@
 import UserCard from "./UserCard";
+import Counter from "./Counter";
 
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
 
       <div>
       {users.map(user => <UserCard key = {user.id}  isStudent = {user.isStudent} name = {user.name} age = {user.age} />)}
+      <Counter />
       </div>
   )
 }
