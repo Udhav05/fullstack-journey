@@ -1,6 +1,7 @@
 import UserCard from "./UserCard";
 import Counter from "./Counter";
 import NameInput from "./NameInput";
+import TodoList from "./TodoList";
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
       {users.map(user => <UserCard key = {user.id}  isStudent = {user.isStudent} name = {user.name} age = {user.age} />)}
       <Counter />
       <NameInput />
+      <TodoList />
      
       </div>
   )
