@@ -2,6 +2,8 @@ import UserCard from "./UserCard";
 import Counter from "./Counter";
 import NameInput from "./NameInput";
 import TodoList from "./TodoList";
+import EffectDemo from './EffectDemo';
+import UserList from './UserList';
 
 function App() {
   
@@ -17,6 +19,8 @@ function App() {
       <Counter />
       <NameInput />
       <TodoList />
+      < EffectDemo />
+      <UserList />
      
       </div>
   )
