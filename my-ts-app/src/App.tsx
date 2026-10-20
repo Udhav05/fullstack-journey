@@ -4,8 +4,13 @@ import NameInput from "./NameInput";
 import TodoList from "./TodoList";
 import EffectDemo from './EffectDemo';
 import UserList from './UserList';
+import { useState } from "react";
+import Timer from "./Timer";
+import UserSearch from "./UserSearch";
 
 function App() {
+
+  const [show, setShow] = useState<boolean>(true);
   
     const users = [
       {id : 1, name: "Alice", isStudent : true,  age : 25},
@@ -21,6 +26,11 @@ function App() {
       <TodoList />
       < EffectDemo />
       <UserList />
+
+      <button onClick ={() => setShow(!show)}>Toggle Timer</button>
+      {show && <Timer />}
+
+      <UserSearch />
      
       </div>
   )
