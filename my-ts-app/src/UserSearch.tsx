@@ -45,7 +45,7 @@ function UserSearch() {
 
     return (
         <div>
-            <h1> User Search</h1>
+            <h1> User Search </h1>
             <input type = "text" value = {query} onChange = {(e) => setQuery(e.target.value)} placeholder = "Search Users" />
             {isLoading && <p>Loading...</p>}
             {error && <p>Error: {error}</p>}
