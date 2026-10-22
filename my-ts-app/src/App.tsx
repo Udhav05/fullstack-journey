@@ -7,6 +7,7 @@ import UserList from './UserList';
 import { useState } from "react";
 import Timer from "./Timer";
 import UserSearch from "./UserSearch";
+import RaceDemo from "./RaceDemo";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
       {show && <Timer />}
 
       <UserSearch />
+      <RaceDemo />
      
       </div>
   )
