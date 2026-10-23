@@ -6,18 +6,19 @@ function RaceDemo() {
 
     const [query, setQuery] = useState<string>('')
     const [results, setResults] = useState<User[]>([])
+
+
 useEffect(() => {
     if (query === "") {
         setResults([]);
         return;
     }
 
-    const controller = new AbortController();          
-
+    const controller = new AbortController();   
     const load = async () => {
         try {
             const res = await fetch(`http://localhost:8000/search?q=${query}`, {
-                signal: controller.signal,             
+                signal: controller.signal,
             });
             const data: User[] = await res.json();
             setResults(data);
@@ -31,7 +32,7 @@ useEffect(() => {
     };
     load();
 
-    return () => controller.abort();                   
+    return () => controller.abort();
 }, [query]);
 
 
